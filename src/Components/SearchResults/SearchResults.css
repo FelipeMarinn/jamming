@@ -1,0 +1,28 @@
+.SearchResults {
+    position: relative;
+    width: 50%;
+    /* height: 950px; */
+    height: 500px;
+    /* overflow-y: scroll; */
+    padding: .88rem;
+    /* background-color: #311E6B; */
+    /* box-shadow: 0 4px 2px 2px #000000; */
+  }
+
+.SearchResults h2 {
+  position: relative;
+}
+  
+  @media only screen and (max-width: 1020px) {
+    .SearchResults {
+      width: 90%;
+      margin-bottom: 2rem;
+    }
+  }
+
+  @media only screen and (max-width: 280px) {
+    .SearchResults {
+      width: 95%;
+      padding: 0;
+    }
+  }

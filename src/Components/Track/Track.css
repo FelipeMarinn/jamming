@@ -1,0 +1,188 @@
+
+  .Track {
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    /* justify-content: space-between; */
+    background-color: #010c3f7e;
+    border-radius: .5rem;
+    box-shadow: 0 .2rem .3rem #10101024;
+    overflow: hidden;
+    color: #f5f5f5;
+    margin: 0 2rem .8rem 0;
+    height: 80px;
+  }
+
+  .Track-action {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 20px;
+    height: 100%;
+  }
+
+  .Track-action button {
+    padding: 0;
+    cursor: pointer;
+    border: none;
+    transition: color .25s;
+    background-color: rgba(0, 0, 0, 0);
+    color: #f5f5f5;
+  }
+
+  .Track-action button i {
+    font-size: 1.3rem;   
+  }
+
+  .Track-action button:hover {
+    color: #6c41ec;
+  }
+
+  .Track-thumb {
+    height: 100%;
+    width: 80px;
+  }
+
+  .Track-thumb img {
+    width: auto;
+    max-height: 100%;
+    object-fit: cover;
+  }
+  
+  .Track-information {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 20px;
+    width: 40%;
+  }
+
+  .Track-information .about {
+    display: flex;
+    align-items: center;
+  }
+
+  .Track-information h3,
+  .Track-information p  {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-wrap: break-word;  
+  }
+  
+  .Track-information h3 {
+    margin: 0 1rem .22rem 0;
+
+  }
+  
+  .Track-information p {
+    font-size: .83rem;
+    font-weight: 300;
+  }  
+ 
+.playPause {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* min-width: 13%; */
+  width: 10%;
+}  
+  
+.play-btn {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #010c3f7e;
+  cursor: pointer;
+  border: none;
+}
+
+.play-btn span {
+  position: absolute;
+  top: 50%;
+  left: 28%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 15px;
+  border-radius: 2px;
+  background: #6c41ec;
+}
+
+.play-btn span:nth-child(2) {
+  left: 58%;
+  transform-origin: center;
+}
+
+.play-btn.pause span:nth-child(2) {
+  transform: translateY(-50%) scaleY(0);
+}
+
+.play-btn.pause span:nth-child(1) {
+  width: 33%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+  border-radius: 0;
+  clip-path: polygon(0 0, 100% 50%, 100% 50%, 0 100%);
+}
+
+.play-btn {
+  animation: pulse 2s linear infinite;
+}
+.play-btn.pause {
+  animation: none;
+}
+
+@keyframes pulse {
+  0% {
+      box-shadow: 0;
+  }
+  50% {
+      box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.1);
+  }
+  100% {
+      box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.4);
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  .Track {
+    margin: 0 .5rem .8rem 0;
+    height: 65px;
+  }
+
+  .Track-information .about {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .Track {
+    margin: 0 .5rem .8rem 0;
+    height: 40px;
+  }
+
+  .Track-information .about {
+    display: block;
+  }
+
+  .Track-action {
+    margin: 0 5px;
+  }
+
+  .Track-thumb {
+    height: 100%;
+    width: 40px;
+  }
+
+  .Track-action button i {
+    font-size: .8rem;   
+  }
+
+  .play-btn {
+    width: 20px;
+    height: 20px;
+  }
+}

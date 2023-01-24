@@ -1,0 +1,29 @@
+
+.song-time {
+    display: flex;
+    font-weight: 300;
+}
+
+.current,
+.duration {
+    font-size: 14px;
+    margin-right: .5rem;
+}
+
+.duration {
+    margin-left: .5rem;
+}
+
+.wave {
+    margin-top: 5px;
+}
+
+@media only screen and (max-width: 575px) {
+    .wave {
+      display: none;
+    }
+
+    .song-time {
+        display: none;
+    }
+  }
