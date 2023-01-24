@@ -4,3 +4,19 @@
     max-height: 90%;
 }
 
+.placeholder-text {
+    font-size: xx-large;
+    justify-content: center;
+}
+
+.placeholder {
+    width: 100%;
+    display: flex;
+    background-color: #010c3f7e;
+    border-radius: .5rem;
+    box-shadow: 0 .2rem .3rem #10101024;
+    height: 75%;
+    justify-content: center;
+    align-items: center;
+    color: #3f3e5c;
+  }
